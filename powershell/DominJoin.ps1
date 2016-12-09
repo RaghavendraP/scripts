@@ -4,6 +4,7 @@ $domain = ""
 #Provide the user password who has previlige to join computer to domain
 $password = "" | ConvertTo-SecureString -asPlainText -Force 
 $domainSN = ""
+#The user who has previlige to add computer to domain
 $username = "$domainSN\JoinDomain"
 $credential = New-Object System.Management.Automation.PSCredential($username,$password)
 #This command will give warning to restart computer on success
