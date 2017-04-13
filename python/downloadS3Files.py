@@ -1,8 +1,11 @@
 from boto.s3.connection import S3Connection
 import os
 
-conn = S3Connection('your-access-key','your-secret-key')
-bucket = conn.get_bucket('bucket')
+aws_access_key= ""
+aws_secret_key= ""
+bucket = ''
+conn = S3Connection(aws_access_key,aws_secret_key)
+bucket = conn.get_bucket(bucket)
 
 for key in bucket.list():
 	print key.name
