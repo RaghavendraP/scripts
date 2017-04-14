@@ -17,3 +17,8 @@ for key in bucket.list():
 	else:
 		res = key.get_contents_to_filename('./'+key.name)
 
+#to download single file
+key_name=''
+local_file_name=''
+key = bucket.get_key(key_name)
+key.get_contents_to_filename(local_file_name)
